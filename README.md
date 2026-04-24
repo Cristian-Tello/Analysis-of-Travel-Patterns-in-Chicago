@@ -20,10 +20,17 @@ Data description:
 * start_ts: Pickup date and time
 * weather_conditions: Weather conditions at the start of the trip
 * duration_seconds: Trip duration in seconds
-  
-```python
 
-```
+1. Loop and River North are the neighborhoods with the highest concentration of destination trips, suggesting that they are quite popular areas in the city. However, Streeterville and West Loop, while having a considerably lower number of destination trips compared to the other 6 neighborhoods, are also noteworthy. It could be said that there is a significant concentration among these 4 mentioned neighborhoods compared to the others.
+
+<p align="center">
+  <img src="https://github.com/Natcol05/Taxi-Travels-in-Chicago/blob/610975a7883f3ad5a887e8df3e0dcd51b14ebba2/Graphics/Most_popular_neighborhoods.png" alt="Sample Image">
+</p>
+
+2. Flash Cab has positioned itself as the leader in the taxi service market, demonstrating clear dominance over its competitors. In contrast, the other companies have a more fragmented and distributed market share, without achieving significant individual market share.
+<p align="center">
+  <img src="https://github.com/Natcol05/Taxi-Travels-in-Chicago/blob/610975a7883f3ad5a887e8df3e0dcd51b14ebba2/Graphics/Most_popular_companies.png" alt="Sample Image">
+</p>
 
 ## Test the hypothesis:
 
@@ -68,12 +75,12 @@ else:
 print(f"\nDuración promedio en días lluviosos: {grupo_lluvioso.mean():.2f} segundos")
 print(f"Duración promedio en días sin lluvia: {grupo_sin_lluvia.mean():.2f} segundos")
 ```
-We reject the null hypothesis.
-There IS a significant difference in trip duration.
-Rain DOES affect the average trip duration.
 
-Average duration on rainy days: 2427.21 seconds
-Average duration on dry days: 1999.68 seconds
 
 ## Main Conclusions:
 1. The Loop neighborhood has the highest number of recorded trips according to Google Maps. Along with River North and other downtown Chicago areas, it stands out for its strategic location in the heart of the city. This result is consistent with urban dynamics: as these are commercial, tourist, and high-density activity areas, it's logical that they have a higher average number of trips.
+
+2. We reject the null hypothesis, There IS a significant difference in trip duration and Rain does affect the average trip duration.
+
+Average duration on rainy days: 2427.21 seconds
+Average duration on dry days: 1999.68 seconds
