@@ -24,7 +24,7 @@ Data description:
 1. Loop and River North are the neighborhoods with the highest concentration of destination trips, suggesting that they are quite popular areas in the city. However, Streeterville and West Loop, while having a considerably lower number of destination trips compared to the other 6 neighborhoods, are also noteworthy. It could be said that there is a significant concentration among these 4 mentioned neighborhoods compared to the others.
 
 <p align="center">
-  <img src="https://github.com/Natcol05/Taxi-Travels-in-Chicago/blob/610975a7883f3ad5a887e8df3e0dcd51b14ebba2/Graphics/Most_popular_neighborhoods.png" alt="Sample Image">
+  <img src="https://github.com/Cristian-Tello/Analysis-of-Travel-Patterns-in-Chicago/blob/main/Top10Neighborhoods.png" alt="Sample Image">
 </p>
 
 2. Flash Cab has positioned itself as the leader in the taxi service market, demonstrating clear dominance over its competitors. In contrast, the other companies have a more fragmented and distributed market share, without achieving significant individual market share.
