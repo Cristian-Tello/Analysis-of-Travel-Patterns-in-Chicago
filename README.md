@@ -29,7 +29,7 @@ Data description:
 
 2. Flash Cab has positioned itself as the leader in the taxi service market, demonstrating clear dominance over its competitors. In contrast, the other companies have a more fragmented and distributed market share, without achieving significant individual market share.
 <p align="center">
-  <img src="https://github.com/Natcol05/Taxi-Travels-in-Chicago/blob/610975a7883f3ad5a887e8df3e0dcd51b14ebba2/Graphics/Most_popular_companies.png" alt="Sample Image">
+  <img src="https://github.com/Cristian-Tello/Analysis-of-Travel-Patterns-in-Chicago/blob/main/Top10TripsCompanies.png" alt="Sample Image">
 </p>
 
 ## Test the hypothesis:
