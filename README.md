@@ -3,9 +3,51 @@
 Import Libraries:
 ```python
 import pandas as pd
-import requests
 import matplotlib.pyplot as plt
 from scipy import stats as st
+```
+
+I Beautiful Soup, request , and Pandas to extract and create a dataframe named weather_records with the weather information for Chicago in 2017:
+```python
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+URL='https://practicum-content.s3.us-west-1.amazonaws.com/data-analyst-eng/moved_chicago_weather_2017.html'
+req = requests.get(URL)
+soup = BeautifulSoup(req.text, 'lxml')
+table = soup.find('table', attrs={"id": "weather_records"})
+heading_table=[]
+for row in table.find_all('th'):
+    heading_table.append(row.text)   
+content=[]
+for row in table.find_all('tr'):
+    if not row.find_all('th'):
+        content.append([element.text for element in row.find_all('td')])
+weather_records = pd.DataFrame(content, columns = heading_table)
+print(weather_records)
+```
+Additionally, I used SQL to combine the 'trip' dataframe with the dataframe named 'weather_records'. Then, I created a column classifying the weather as "Good" or "Bad" based on specific conditions:
+```SQL
+SELECT
+    t.start_ts, 
+    w.weather_conditions,
+    t.duration_seconds
+FROM trips t
+INNER JOIN (
+    SELECT 
+        ts,
+        CASE
+            WHEN description LIKE '%rain%' OR description LIKE '%storm%' THEN 'Bad'
+            ELSE 'Good'
+        END AS weather_conditions
+    FROM weather_records
+) w
+    ON t.start_ts = w.ts   -- puente entre viajes y clima
+WHERE 
+    t.pickup_location_id = 50   -- Loop
+    AND t.dropoff_location_id = 63  -- O'Hare
+    AND EXTRACT(DOW FROM t.start_ts) = 6  -- sábado
+ORDER BY t.trip_id;
 ```
 Data description:
 1. Company Information: Contains two columns with the following data:
