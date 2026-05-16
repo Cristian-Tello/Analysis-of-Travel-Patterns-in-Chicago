@@ -42,11 +42,11 @@ INNER JOIN (
         END AS weather_conditions
     FROM weather_records
 ) w
-    ON t.start_ts = w.ts   -- puente entre viajes y clima
+    ON t.start_ts = w.ts   
 WHERE 
-    t.pickup_location_id = 50   -- Loop
-    AND t.dropoff_location_id = 63  -- O'Hare
-    AND EXTRACT(DOW FROM t.start_ts) = 6  -- sábado
+    t.pickup_location_id = 50   
+    AND t.dropoff_location_id = 63  
+    AND EXTRACT(DOW FROM t.start_ts) = 6  
 ORDER BY t.trip_id;
 ```
 Data description:
