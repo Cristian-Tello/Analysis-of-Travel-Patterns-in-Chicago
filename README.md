@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from scipy import stats as st
 ```
 
-I Beautiful Soup, request , and Pandas to extract and create a dataframe named weather_records with the weather information for Chicago in 2017:
+I used libraries Beautiful Soup, request , and Pandas to extract and create a dataframe named weather_records with the weather information for Chicago in 2017:
 ```python
 import requests
 from bs4 import BeautifulSoup
